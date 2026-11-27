@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% from "macros.html" import csrf, field, textarea %}
+{% block title %}{{ 'Edit notice' if item else 'New notice' }}{% endblock %}
+{% block content %}
+<section class="card narrow"><h1>{{ 'Edit notice' if item else 'New notice' }}</h1>
+  <form method="post">{{ csrf() }}
+    {% if not item %}<label class="field"><span>Audience</span><select name="club_id">
+      {% if g.user.is_admin %}<option value="">Campus-wide (everyone signed in)</option>{% endif %}
+      {% for c in clubs %}<option value="{{ c.id }}" {% if c.id == data.club_id %}selected{% endif %}>{{ c.name }} members</option>{% endfor %}</select></label>{% endif %}
+    {{ field('title', 'Title', data.title, required=true, maxlength=120) }}
+    {{ textarea('body', 'Message', data.body, 3000, 7) }}
+    <label class="check"><input type="checkbox" name="pinned" {% if data.pinned %}checked{% endif %}> Pin to the top</label>
+    <div class="actions"><button class="btn">{{ 'Save' if item else 'Publish' }}</button>
+      <a class="btn btn-ghost" href="{{ url_for('announcements.index') }}">Cancel</a></div>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% from "macros.html" import post_button %}
+{% block title %}Announcements{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Announcements</h1><p class="muted">Campus notices and updates from your clubs.</p></div>
+  {% if can_create %}<a class="btn" href="{{ url_for('announcements.create') }}">+ New notice</a>{% endif %}</div>
+{% for a in items %}
+<article class="card {% if a.pinned %}highlight{% endif %}">
+  <h2>{{ a.title }} {% if a.pinned %}<span class="badge badge-warn">Pinned</span>{% endif %}</h2>
+  <div class="muted">{{ a.club_name or 'Campus-wide' }} · {{ a.author or 'Former user' }} · {{ a.created_at|date }}</div>
+  <p class="pre">{{ a.body }}</p>
+  {% if a.id in editable %}<div class="actions">
+    <a class="btn btn-sm btn-ghost" href="{{ url_for('announcements.edit', item_id=a.id) }}">Edit</a>
+    {{ post_button(url_for('announcements.delete', item_id=a.id), 'Delete', 'btn-sm btn-danger', 'Delete this announcement?') }}</div>{% endif %}
+</article>
+{% else %}<p class="empty">No announcements yet.</p>{% endfor %}
+{% endblock %}
