@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>My Profile</h1><p class="muted">Manage your details and password.</p></div>
+
+    </div>
+    <section class="grid">
+      <form class="card" id="profileForm">
+        <h2>Personal details</h2>
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" disabled></div>
+        <div class="field"><label for="dept">Department</label><input id="dept" name="dept" required></div>
+        <div class="field"><label for="year">Year</label><input id="year" name="year" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+        <button class="btn">Update profile</button>
+      </form>
+      <form class="card" id="passwordForm">
+        <h2>Change password</h2>
+        <div class="field"><label for="oldPass">Current password</label><input id="oldPass" type="password" required></div>
+        <div class="field"><label for="newPass">New password (min. 6 characters)</label><input id="newPass" type="password" minlength="6" required></div>
+        <div class="field"><label for="confirmPass">Confirm new password</label><input id="confirmPass" type="password" minlength="6" required></div>
+        <button class="btn">Change password</button>
+      </form>
+      <div class="card admin-only">
+        <h2>Data management</h2>
+        <p class="muted">Back up, restore or reset all website data. The backup file contains personal details, so keep it private.</p>
+        <div class="actions data-actions">
+          <button class="btn outline" data-action="backup">Download backup</button>
+          <button class="btn outline" data-action="restore">Restore backup</button>
+          <button class="btn danger" data-action="reset">Reset demo data</button>
+        </div>
+        <input type="file" id="restoreFile" accept=".json" hidden>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

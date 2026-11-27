@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Finance</h1><p class="muted">Track club income and expenses.</p></div>
+      <div class="actions"><button class="btn outline" data-action="export">Export CSV</button><button class="btn" data-action="add">+ Add transaction</button></div>
+    </div>
+    <div class="toolbar">
+      <select id="typeFilter" aria-label="Filter by type"><option value="">All types</option><option value="income">Income</option><option value="expense">Expense</option></select>
+      <select id="clubFilter" aria-label="Filter by club"></select>
+    </div>
+    <section class="stats" id="totals"></section>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Date</th><th>Category</th><th>Club</th><th>Note</th><th>Amount</th><th>Actions</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="finance.js"></script>
+</body>
+</html>

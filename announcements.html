@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="announcements.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Announcements</h1><p class="muted">News and notices from your clubs.</p></div>
+      <button class="btn admin-only" data-action="add">+ New announcement</button>
+    </div>
+    <div class="toolbar"><input type="search" id="search" placeholder="Search announcements..." aria-label="Search announcements"></div>
+    <section id="feed"></section>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="announcements.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.amount { font-weight: 600; white-space: nowrap; }
+.amount.income { color: var(--success); }
+.amount.expense { color: var(--danger); }
+td .actions { flex-wrap: nowrap; }
+td:first-child { white-space: nowrap; }

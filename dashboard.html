@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Dashboard</h1><p class="muted">An overview of club activity.</p></div>
+
+    </div>
+    <section class="stats" id="stats"></section>
+    <section class="grid">
+      <div class="card"><h2>Upcoming events</h2><ul class="list" id="upcoming"></ul></div>
+      <div class="card"><h2>Latest announcements</h2><ul class="list" id="news"></ul></div>
+      <div class="card admin-only"><h2>Pending approvals</h2><ul class="list" id="pending"></ul></div>
+    </section>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

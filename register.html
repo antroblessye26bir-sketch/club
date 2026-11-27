@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card card">
+    <div class="auth-brand">Club<span>Hub</span></div>
+    <p class="muted">Create your member account</p>
+    <form id="registerForm">
+      <div class="field"><label for="name">Full name</label><input id="name" autocomplete="name" required></div>
+      <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="dept">Department</label><input id="dept" required></div>
+      <div class="field"><label for="year">Year</label>
+        <select id="year"><option>1st</option><option>2nd</option><option>3rd</option><option>4th</option></select></div>
+      <div class="field"><label for="password">Password (min. 6 characters)</label><input id="password" type="password" minlength="6" autocomplete="new-password" required></div>
+      <button class="btn block">Register</button>
+    </form>
+    <p class="switch">Already registered? <a href="login.html">Log in</a></p>
+  </main>
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

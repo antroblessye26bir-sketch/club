@@ -1,0 +1,4 @@
+#feed { display: grid; gap: 14px; max-width: 820px; }
+.notice.pinned { border-left: 4px solid #f0a500; }
+.notice h3 { margin: 6px 0 2px; }
+.notice .pre { margin: 10px 0; }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="members.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Members</h1><p class="muted">Approve registrations and manage members.</p></div>
+      <div class="actions"><button class="btn outline" data-action="export">Export CSV</button><button class="btn" data-action="add">+ Add member</button></div>
+    </div>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search name, email or department..." aria-label="Search members">
+      <select id="statusFilter" aria-label="Filter by status"><option value="">All statuses</option><option value="active">Active</option><option value="pending">Pending</option><option value="inactive">Inactive</option></select>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Name</th><th>Department</th><th>Clubs</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="members.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clubs | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="clubs.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Clubs</h1><p class="muted">Explore, join and manage student clubs.</p></div>
+      <button class="btn admin-only" data-action="add">+ Add club</button>
+    </div>
+    <div class="toolbar"><input type="search" id="search" placeholder="Search clubs..." aria-label="Search clubs"></div>
+    <section class="grid" id="clubList"></section>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="clubs.js"></script>
+</body>
+</html>

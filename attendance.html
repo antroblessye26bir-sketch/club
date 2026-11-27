@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Attendance</h1><p class="muted">Record and review event attendance.</p></div>
+      <button class="btn outline admin-only" data-action="export">Export CSV</button>
+    </div>
+    <section id="adminView" hidden>
+      <div class="toolbar"><select id="eventSelect" aria-label="Choose an event"></select></div>
+      <p class="muted summary" id="summary"></p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Present</th><th>Name</th><th>Department</th><th>RSVP</th></tr></thead>
+        <tbody id="sheet"></tbody>
+      </table></div>
+      <button class="btn save-btn" data-action="save">Save attendance</button>
+    </section>
+    <section id="memberView" hidden>
+      <div class="stats" id="myStats"></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Event</th><th>Date</th><th>Status</th></tr></thead>
+        <tbody id="history"></tbody>
+      </table></div>
+    </section>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="attendance.js"></script>
+</body>
+</html>

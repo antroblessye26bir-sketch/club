@@ -1,0 +1,3 @@
+.summary { margin-bottom: 10px; }
+.save-btn { margin-top: 16px; }
+#sheet tr:has(input:checked) { background: var(--success-soft); }

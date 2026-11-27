@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | ClubHub</title>
+  <link rel="stylesheet" href="../../shared/styles.css">
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+  <main class="main">
+    <div class="page-head">
+      <div><h1>Events</h1><p class="muted">Plan events and RSVP to take part.</p></div>
+      <button class="btn admin-only" data-action="add">+ Add event</button>
+    </div>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search events..." aria-label="Search events">
+      <select id="when" aria-label="Filter by date"><option value="upcoming">Upcoming</option><option value="past">Past</option><option value="all">All events</option></select>
+      <select id="clubFilter" aria-label="Filter by club"></select>
+    </div>
+    <section class="grid" id="eventList"></section>
+  </main>
+
+  <script src="../../shared/store.js"></script>
+  <script src="../../shared/ui.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>
